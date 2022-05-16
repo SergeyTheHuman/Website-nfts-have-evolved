@@ -1,0 +1,28 @@
+//vars
+$color-white: #fff
+$color-black: #000
+$color-gray: #1C1E1E
+
+$font-size: 16px
+$font-family: sans-serif
+
+$transition: 0.3s all ease-in-out
+
+//global styles	
+*,
+*::after,
+*::before
+	box-sizing: border-box
+
+body,
+html
+	overflow-x: hidden
+	height: 100%
+	@include font('Montserrat', 16px)
+	color: $color-white
+	background: $color-black
+
+._container
+	width: 100%
+	max-width: 1130px
+	padding: 0 2rem
