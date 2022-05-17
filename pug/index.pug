@@ -4,13 +4,14 @@ html(lang="ru")
 		include utils/meta
 		link(rel="stylesheet", href="css/style.min.css")
 		link(rel="shortcut icon", href="files/favicon.ico")
+		include utils/fonts
 		title Main Page
 	body
 		include components/header
 		
 		include components/header-fullscreen
-		p Это главная страница!
-		p Привет из главной секции!
+
+		include components/welcome
 
 		include components/footer
 		script(src='js/app.min.js')
