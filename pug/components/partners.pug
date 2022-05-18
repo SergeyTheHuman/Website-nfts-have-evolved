@@ -1,0 +1,39 @@
+-
+	const partners = [
+		{
+			logoSrc: '@img/cyber-logo.png',
+			title: 'cyber unit'
+		},
+		{
+			logoSrc:'@img/kevuru-logo.png',
+			title:'kevuru games'
+		},
+		{
+			logoSrc: '@img/polygon-logo.png',
+			title: 'polygon unit'
+		},
+		{
+			logoSrc: '@img/mak-logo.png',
+			title: 'mak capital'
+		},
+		{
+			logoSrc: '@img/x-logo.png',
+			title: 'x'
+		},
+		{
+			logoSrc: '@img/crft-logo.png',
+			title: 'crft video'
+		},
+	]
+
+section.partners 
+	._container 
+		.partners__text 
+			span.partners__subtitle our
+			h2.partners__title partners//
+		.partners__grid 
+			each partner in partners	
+				.partners__grid-item
+					.partners__grid-wrapper
+						img.partners__grid-logo(src= partner.logoSrc)
+						h4.partners__grid-title= partner.title

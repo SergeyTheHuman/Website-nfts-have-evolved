@@ -1,3 +1,22 @@
+-
+	const items = [
+		{
+			title: 'it all starts with your meta sciencist',
+			text: 'Every player needs a MAD Metascientist to enter the first stage of the MAD Metaverse and to start experimenting in the lab to evolve cells into new biodigital creatures.'
+		},
+		{
+			title: 'Earn as you play',
+			text: 'In your lab you will breed scarce Nanocells and one of a kind mutated versions of your third party NFT collectibles for you to sell or trade. You will also earn Metafuel (native ERC-20 tokens) as you win battles.'
+		},
+		{
+			title: 'Give life to your NFTs & Crypto',
+			text: 'MAD Metascientists allow you to interact with and leverage your existing art & collectibles to enhance gameplay, evolve your Metacells and earn crypto.'
+		},
+		{
+			title: 'Build the greatest tribe',
+			text: 'Breed and trade your cells to form the ultimate tribe. Who knows what your cells could evolve into next? New scarce attributes? Powerful skills? Or even a completely new species - the possibilities are endless.'
+		},
+	]
 section.welcome
 	._container
 		.welcome__content
@@ -9,19 +28,9 @@ section.welcome
 			.welcome__label-text A collaborative gamified Metaverse, for all NFT's & crypto. Mint your MAD Metascientist and start playing, trading, earning and battling in the brand new play-to-earn game of evolution.
 			.welcome__label-text_vertical 34.0501 N +118.2446R
 		.welcome__grid
-			.welcome__grid-item
-				.welcome__grid-title it all starts with your meta sciencist
-					<span>//</span>
-				.welcome__grid-text Every player needs a MAD Metascientist to enter the first stage of the MAD Metaverse and to start experimenting in the lab to evolve cells into new biodigital creatures.
-			.welcome__grid-item
-				.welcome__grid-title it all starts with your meta sciencist
-					<span>//</span>
-				.welcome__grid-text Every player needs a MAD Metascientist to enter the first stage of the MAD Metaverse and to start experimenting in the lab to evolve cells into new biodigital creatures.
-			.welcome__grid-item
-				.welcome__grid-title it all starts with your meta sciencist
-					<span>//</span>
-				.welcome__grid-text Every player needs a MAD Metascientist to enter the first stage of the MAD Metaverse and to start experimenting in the lab to evolve cells into new biodigital creatures.
-			.welcome__grid-item
-				.welcome__grid-title it all starts with your meta sciencist
-					<span>//</span>
-				.welcome__grid-text Every player needs a MAD Metascientist to enter the first stage of the MAD Metaverse and to start experimenting in the lab to evolve cells into new biodigital creatures.
+			each item in items
+				.welcome__grid-item
+					.welcome__grid-title= item.title
+						<span>//</span>
+					.welcome__grid-text= item.text
+			
