@@ -1,91 +1,53 @@
-
-
+-
+	const team = [
+		{
+			imageSrc: '@img/team/alexandra.jpg',
+			name: 'Alexandra Voronova',
+			job: 'Malevich'
+		},
+		{
+			imageSrc: '@img/team/sergey.jpg',
+			name: 'Sergey Ivanov',
+			job: 'Bezrabotniy'
+		},
+		{
+			imageSrc: '@img/team/arkadiy.jpg',
+			name: 'Arkadiy Skalin',
+			job: 'Surf Coffee'
+		},
+		{
+			imageSrc: '@img/team/nikita.jpg',
+			name: 'Nikita Ivanov',
+			job: 'Student'
+		},
+		{
+			imageSrc: '@img/team/jija.jpg',
+			name: 'Jija',
+			job: 'I\'m a rat. Are you serious?'
+		},
+		{
+			imageSrc: '@img/team/debil.jpg',
+			name: 'What the f...?',
+			job: 'What the f...?'
+		},
+	]
 section.team 
 	._container
 		h2.team__title team
 		.team__grid
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-			.team__grid-transform
-				.team__grid-wrapper
-					.team__grid-overlay
-					.team__grid-item
-						.team__grid-photo
-							.team__grid-fade 
-							img.team__grid-img(src='@img/photo.jpg')
-						.team__grid-content
-							p.team__grid-name Alexandra Voronova
-							.team__grid-label 
-								span.team__grid-text Malevich
-								a.team__grid-link(href='http://www.google.com')
-									svg.team__grid-linkedin
-										use(xlink:href='@svg/linkedin')
-
+			each person in team
+				.team__grid-transform
+					.team__grid-wrapper
+						.team__grid-overlay
+						.team__grid-item
+							.team__grid-photo
+								.team__grid-fade 
+								img.team__grid-img(src= person.imageSrc)
+							.team__grid-content
+								p.team__grid-name= person.name
+								.team__grid-label 
+									span.team__grid-text= person.job
+									a.team__grid-link(href='http://www.google.com')
+										svg.team__grid-linkedin
+											use(xlink:href='@svg/linkedin')
+			
