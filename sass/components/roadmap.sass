@@ -1,0 +1,138 @@
+.roadmap
+	padding: 7rem 2rem
+	display: flex
+	flex-direction: column
+	@media screen and ( max-width: 1280px )
+		padding: 5rem 0rem
+	&__title
+		margin-left: 25%
+		margin-bottom: 5rem
+		@media screen and ( max-width: 767px )
+			margin: 0px auto 2rem auto
+			font-size: 3rem
+	&__wrapper
+		display: flex
+		justify-content: center
+	&__content
+		background: url("@img/roadmap/roadmap.png") top center / 70% no-repeat
+		align-self: center
+		max-width: 1220px
+		width: 100%
+		position: relative
+		min-height: 1200px
+		@media screen and ( max-width: 1280px )
+			background: url("../images/roadmap/test.jpg") -40px 0px/600px no-repeat
+			width: 720px
+			display: grid
+			grid-template-columns: 1.375rem 1fr 5.125rem 1fr
+			column-gap: 1.5rem
+			padding-top: 90rem
+		@media screen and ( max-width: 767px )
+			background: none
+			width: 100%
+			display: grid
+			grid-template-columns: 1fr
+			row-gap: 1.5rem
+			padding-top: 0
+	&__item
+		max-width: 19.75rem
+		@media screen and ( max-width: 767px )
+			max-width: 100%
+			padding: 0 1rem
+			text-align: center
+		&:hover
+			.roadmap__subtitle
+				&::after
+					transform: translateX(0)
+			.roadmap__text-ul
+				&::before
+					transform: translateY(0)
+		&:nth-child(1),
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4)
+			position: absolute
+		&:nth-child(1)
+			top: 1.5rem
+			left: -1rem
+			@media screen and ( max-width: 1280px )
+				top: 43rem
+				left: 3rem
+			@media screen and ( max-width: 767px )
+				position: static
+		&:nth-child(2)
+			bottom: 5rem
+			left: 17rem
+			@media screen and ( max-width: 1280px )
+				position: static
+				grid-column: 2/3
+			@media screen and ( max-width: 767px )
+				grid-column: unset
+		&:nth-child(3)
+			bottom: 3rem
+			right: 12rem
+			@media screen and ( max-width: 1280px )
+				position: static
+				grid-column: 4/5
+			@media screen and ( max-width: 767px )
+				grid-column: unset
+		&:nth-child(4)
+			top: 2rem
+			right: -4rem
+			.roadmap__subtitle
+				margin-left: 5rem
+			@media screen and ( max-width: 1280px )
+				top: -3rem
+				left: 28rem
+			@media screen and ( max-width: 767px )
+				position: static
+				.roadmap__subtitle
+					margin-left: 0rem
+	&__subtitle
+		@include font('Montserrat', 2.18rem, 800)
+		margin-left: 1rem
+		line-height: 4.45em
+		text-transform: uppercase
+		transition: $transition
+		position: relative
+		overflow: hidden
+		@media screen and ( max-width: 767px )
+			line-height: 3em
+		&::after
+			content: ''
+			position: absolute
+			transition: $transition
+			width: 35%
+			height: 2px
+			background: linear-gradient(90deg, $color-red, transparent)
+			bottom: 32%
+			left: 1%
+			transform: translateX(-120%)
+			@media screen and ( max-width: 767px )
+				display: none
+		span
+			color: $color-red
+	&__text-ul
+		padding: 0 0.5rem
+		position: relative
+		overflow-y: hidden
+		&::before
+			content: ''
+			position: absolute
+			width: 2px
+			height: 100%
+			background: linear-gradient(0deg, $color-red, transparent)
+			transform: translateY(120%)
+			transition: $transition
+			top: 0
+			left: 0
+	&__text-li
+		@include font('Montserrat', 1.125rem, 400)
+		line-height: 1.22em
+		letter-spacing: 0.44em
+		text-transform: uppercase
+		opacity: 0.5
+		&:not(:last-child)
+			margin-bottom: 1.44em
+			@media screen and ( max-width: 767px )
+				margin-bottom: 1em
