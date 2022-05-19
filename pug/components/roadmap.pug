@@ -1,42 +1,57 @@
+-
+	const steps = [
+		{
+			title: 'q3 2022',
+			liArray: [
+				'The MAD Metascientist Face Reveal Event',
+				'Research Program Launch',
+				'Particle Program Launch',
+				'The MAD Nanocell Spawn',
+				'The Field (Native DEX) Launch',
+				'Super Scientists',
+				'The MAD Nanocell Airdrop',
+			]
+		},
+		{
+			title: 'q4 2022',
+			liArray: [
+				'The Nano Wars Game',
+				'Royal Bloodline',
+				'The MAD Governance Token Airdrop',
+				'NANO Upgrades',
+			]
+		},
+		{
+			title: 'q1 2023',
+			liArray: [
+				'The Field 2.0 Launch',
+				'Solana Cross-Chain Support',
+			]
+		},
+		{
+			title: 'q2 2022',
+			liArray: [
+				'The MAD Metascientist Mint',
+				'The Lab Launch',
+				'The Field Launch',
+				'The MAD Metacell Spawning',
+				'MDMA Token Airdrop',
+				'MAD Metacell Evolution Inception',
+				'MAD Metacell Manipulation',
+				'Host Protocol',
+				'Crypto Protocol Launch',
+			]
+		},
+	]
 section.roadmap
 	h2.team__title.roadmap__title roadmap
 	.roadmap__wrapper
 		.roadmap__content
-			.roadmap__item 
-				h4.roadmap__subtitle q3 2022 #[span //]
-				.roadmap__text
-					ul.roadmap__text-ul
-						li.roadmap__text-li The MAD Metascientist Face Reveal Event
-						li.roadmap__text-li Research Program Launch
-						li.roadmap__text-li Particle Program Launch
-						li.roadmap__text-li The MAD Nanocell Spawn
-						li.roadmap__text-li The Field (Native DEX) Launch
-						li.roadmap__text-li Super Scientists
-						li.roadmap__text-li The MAD Nanocell Airdrop
-			.roadmap__item 
-				h4.roadmap__subtitle q4 2022 #[span //]
-				.roadmap__text
-					ul.roadmap__text-ul
-						li.roadmap__text-li The Nano Wars Game
-						li.roadmap__text-li Royal Bloodline
-						li.roadmap__text-li The MAD Governance Token Airdrop
-						li.roadmap__text-li NANO Upgrades
-			.roadmap__item 
-				h4.roadmap__subtitle q1 2023 #[span //]
-				.roadmap__text
-					ul.roadmap__text-ul
-						li.roadmap__text-li The Field 2.0 Launch
-						li.roadmap__text-li Solana Cross-Chain Support
-			.roadmap__item 
-				h4.roadmap__subtitle q2 2022 #[span //]
-				.roadmap__text
-					ul.roadmap__text-ul
-						li.roadmap__text-li The MAD Metascientist Mint
-						li.roadmap__text-li The Lab Launch
-						li.roadmap__text-li The Field Launch
-						li.roadmap__text-li The MAD Metacell Spawning
-						li.roadmap__text-li MDMA Token Airdrop
-						li.roadmap__text-li MAD Metacell Evolution Inception
-						li.roadmap__text-li MAD Metacell Manipulation
-						li.roadmap__text-li Host Protocol
-						li.roadmap__text-li Crypto Protocol Launch
+			each step in steps
+				.roadmap__item 
+					h4.roadmap__subtitle= step.title
+						span //
+					.roadmap__text
+						ul.roadmap__text-ul
+							each li in step.liArray
+								li.roadmap__text-li= li
