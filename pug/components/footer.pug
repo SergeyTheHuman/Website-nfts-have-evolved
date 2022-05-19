@@ -1,1 +1,19 @@
+-
+	const svg = [
+		'@svg/discord',
+		'@svg/instagram',
+		'@svg/telegram',
+		'@svg/linkedin',
+		'@svg/tumblr',
+	]
+
 footer.footer
+	.footer__main
+		h2.footer__title For the full roadmap check out our #[span Discord].
+		a(href='https://www.google.com' target="_blank").footer__link join
+	.footer__contacts
+		each icon in svg
+			a(href='https://www.google.com' target="_blank").footer__icon-link
+				svg.footer__icon
+					use(xlink:href= icon)
+	.footer__rights © mad metaverse 2022. All Rights Reserved.

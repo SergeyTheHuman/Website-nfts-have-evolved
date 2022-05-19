@@ -27,10 +27,11 @@ section.welcome
 			span.welcome__label-q q1  2022
 			.welcome__label-text A collaborative gamified Metaverse, for all NFT's & crypto. Mint your MAD Metascientist and start playing, trading, earning and battling in the brand new play-to-earn game of evolution.
 			.welcome__label-text_vertical 34.0501 N +118.2446R
-		.welcome__grid
-			each item in items
-				.welcome__grid-item
-					.welcome__grid-title= item.title
-						<span>//</span>
-					.welcome__grid-text= item.text
+		.welcome__wrapper
+			.welcome__grid
+				each item in items
+						.welcome__grid-item
+							.welcome__grid-title= item.title
+								<span>//</span>
+							.welcome__grid-text= item.text
 			

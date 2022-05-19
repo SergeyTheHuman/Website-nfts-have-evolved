@@ -1,2 +1,123 @@
 .footer
-	width: 100%
+	margin: 5rem 0
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	gap: 4rem
+	&__main
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 3rem
+		@media screen and ( max-width: 700px )
+			flex-direction: column
+	&__title,
+	&__link
+		@include font('Montserrat', 2rem, 800)
+		font-size: 32px
+		line-height: 1.5em
+		text-transform: uppercase
+		span
+			text-decoration: underline
+	&__title
+		max-width: 471px
+		@media screen and ( max-width: 550px )
+			padding: 0 0.8rem
+			font-size: 1.5rem
+			text-align: center
+	&__link
+		width: 110px
+		height: 64px
+		display: flex
+		justify-content: center
+		align-items: center
+		background: $color-gray
+		position: relative
+		color: $color-white
+		text-decoration: none
+		transition: $transition
+		animation: joinLinkAnimation 0.8s ease 0s infinite alternate
+		@media screen and ( max-width: 700px )
+			width: 80%
+		&:hover
+			animation-play-state: paused
+			&::before
+				animation-play-state: paused
+		&::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: -10%
+			height: 2px
+			width: 18.1818%
+			transition: $transition
+			background-color: $color-white
+			animation: joinLinkBeforeAnimation 0.8s ease 0s infinite alternate
+			@media screen and ( max-width: 700px )
+				left: -2rem
+				animation: joinLinkBefore700pxAnimation 0.8s ease 0s infinite alternate
+	&__contacts
+		padding: 0 20px
+		display: flex
+		justify-content: center
+		align-items: center
+		gap: 1.75rem
+		flex-wrap: wrap
+	&__icon
+		padding: 5px
+		width: 53px
+		height: 53px
+		border-radius: 50%
+		color: $color-black
+		background-color: $color-white
+		transition: $transition
+		&:hover
+			animation: iconAnimation .75s ease-in-out
+	&__rights
+		@include font('Montserrat', 0.75rem, 300)
+		line-height: 1.25em
+		letter-spacing: 1.05px
+		text-transform: uppercase
+		opacity: 0.5
+		text-align: center
+
+@keyframes iconAnimation
+	0%
+		transform: scale(1) rotate(0deg)
+	25%
+		transform: scale(1.2) rotate(45deg)
+	75%
+		transform: scale(1.2) rotate(-45deg)
+	100%
+		transform: scale(1) rotate(0)
+
+@keyframes joinLinkAnimation
+	0%
+		background: $color-gray
+	20%
+		background: $color-gray
+	80%
+		background: $color-red
+	100%
+		background: $color-red
+
+@keyframes joinLinkBeforeAnimation
+	0%
+		left: -25%
+	20%
+		left: -25%
+	80%
+		left: 110%
+	100%
+		left: 110%
+
+@keyframes joinLinkBefore700pxAnimation
+	0%
+		left: -6rem
+	20%
+		left: -6rem
+	80%
+		left: calc(100% + 2rem)
+	100%
+		left: calc(100% + 2rem)
